@@ -1,0 +1,118 @@
+.inline-flex {
+  display: inline-flex;
+}
+
+.gap-2 {
+  gap: 8px;
+}
+
+.select-none {
+  user-select: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.animatedCheckbox {
+  display: none;
+}
+
+.animatedCheckboxLabel {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  background-color: #1748e9;
+  transform: translateY(-50%);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease transform, 0.2s ease background-color,
+    0.2s ease box-shadow;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.animatedCheckboxLabel:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  margin: 0 auto;
+  background-color: #fff;
+  transform: translateY(-50%);
+  border-radius: 2px;
+  transition: 0.2s ease width, 0.2s ease height;
+}
+
+.animatedCheckboxLabel:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+.tickMark {
+  position: absolute;
+  top: -56px;
+  right: 0;
+  left: -32px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  margin-left: 14px;
+  transform: rotateZ(-40deg);
+}
+
+.tickMark:before,
+.tickMark:after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  border-radius: 0px;
+  opacity: 0;
+  transition: 0.2s ease transform, 0.2s ease opacity;
+}
+
+.tickMark:before {
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  height: 7px;
+  transform: translateY(-68px);
+}
+
+.tickMark:after {
+  left: 0;
+  bottom: 0;
+  width: 22%;
+  height: 2px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.23);
+  transform: translateX(78px);
+}
+
+.active + .animatedCheckboxLabel {
+  background-color: #1748e9;
+}
+
+.active + .animatedCheckboxLabel:before {
+  width: 0;
+  height: 0;
+}
+
+.active + .animatedCheckboxLabel .tickMark:before,
+.active + .animatedCheckboxLabel .tickMark:after {
+  transform: translate(0);
+  opacity: 1;
+}
