@@ -3,6 +3,7 @@ import "./App.css";
 import CatchyCheckbox from "./components/CatchyCheckbox/CatchyCheckbox";
 import AnimatedCheckbox from "./components/AnimatedCheckbox/AnimatedCheckbox";
 import CenteredTextHR from "./components/CenteredTextHR/CenteredTextHR";
+import IranMap from "./components/IranMap/IranMap";
 
 function App() {
   const [isChecked, setIsChecked] = useState(false);
@@ -24,6 +25,13 @@ function App() {
           isActive={isChecked}
           label="چکباس سفارشی ۲"
         />
+      </div>
+
+      <div className="flex flex-col">
+        <CenteredTextHR title="نقشه ایران" type={1} />
+        <div className="w-[200px]">
+          <IranMap />
+        </div>
       </div>
     </div>
   );
