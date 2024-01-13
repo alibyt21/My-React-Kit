@@ -1,0 +1,23 @@
+.catchyCircle:before {
+    content: "";
+    left: 49px;
+    bottom: 26px;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    background: white !important;
+    border-radius: 50%;
+    box-shadow: -7px 10px 0 #2563EB !important;
+}
+
+.catchyCircle:after {
+    content: "";
+    left: -14px;
+    bottom: 26px;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    background: white !important;
+    border-radius: 50%;
+    box-shadow: 7px 10px 0 #2563EB !important;
+}
