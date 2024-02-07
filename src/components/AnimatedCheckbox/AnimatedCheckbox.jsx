@@ -18,7 +18,7 @@ export default function AnimatedCheckbox({ label, handleCheck, isActive }) {
           id="_checkbox"
         />
         <div
-          for="_checkbox"
+          htmlFor="_checkbox"
           className={`${styles.animatedCheckboxLabel} ${styles["cursor-pointer"]}`}
         >
           <div id="tick_mark" className={styles.tickMark}></div>

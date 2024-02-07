@@ -7,7 +7,7 @@ export default function CatchyCheckbox({ label, handleCheck, isActive }) {
       onClick={() => handleCheck()}
     >
       <div
-        class={`${styles["cursor-pointer"]} ${styles.checkbox} ${
+        className={`${styles["cursor-pointer"]} ${styles.checkbox} ${
           isActive ? styles.active : ""
         }`}
       ></div>

@@ -14,8 +14,8 @@ export default function AroundCircle({ dataArray = [], title, radius = 200 }) {
         setDegsArray(array);
     }
     useEffect(() => {
+        console.log("slam");
         createDegsArray();
-        console.log(degsArray);
     }, [data])
     const circleJSX = data.map(function (single, index) {
         return (
