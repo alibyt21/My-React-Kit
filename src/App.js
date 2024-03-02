@@ -6,6 +6,7 @@ import CenteredTextHR from "./components/CenteredTextHR/CenteredTextHR";
 import IranMap from "./components/IranMap/IranMap";
 import AroundCircle from "./components/AroundCircle/AroundCircle";
 import AlMarquee from "./components/AlMarquee/AlMarquee";
+import ShiningEffect from "./components/ShiningEffect/ShiningEffect";
 
 function App() {
   const [isChecked, setIsChecked] = useState(false);
@@ -29,6 +30,16 @@ function App() {
 
   return (
     <div className="App">
+      <div className="flex flex-col justify-center items-center">
+        <CenteredTextHR title="My Shining Button" type={1} />
+        <ShiningEffect>
+          <button className="bg-blue-500 p-3 py-2 rounded-xl">
+            shining effect
+          </button>
+        </ShiningEffect>
+      </div>
+
+
       <div className="flex flex-col justify-center items-center">
         <CenteredTextHR title="My custom Marquee" type={1} />
         <AlMarquee text="These are some of my custom components created in React" width={400} direction="ltr" />
@@ -70,7 +81,7 @@ function App() {
       <div className="flex flex-col">
         <CenteredTextHR title="Around Circle" type={1} />
         <div className="flex w-full">
-          <AroundCircle dataArray={["test0","test1","test2","test3","test4","test5"]} title="hello world" />
+          <AroundCircle dataArray={["test0", "test1", "test2", "test3", "test4", "test5"]} title="hello world" />
           {/* <input onChange={handleCountChange} type="number" min="0" max="12" className="border border-black" /> */}
         </div>
       </div>
