@@ -7,6 +7,7 @@ import IranMap from "./components/IranMap/IranMap";
 import AroundCircle from "./components/AroundCircle/AroundCircle";
 import AlMarquee from "./components/AlMarquee/AlMarquee";
 import ShiningEffect from "./components/ShiningEffect/ShiningEffect";
+import Spinner from "./components/Spinner/Spinner";
 
 function App() {
   const [isChecked, setIsChecked] = useState(false);
@@ -83,6 +84,13 @@ function App() {
         <div className="flex w-full">
           <AroundCircle dataArray={["test0", "test1", "test2", "test3", "test4", "test5"]} title="hello world" />
           {/* <input onChange={handleCountChange} type="number" min="0" max="12" className="border border-black" /> */}
+        </div>
+      </div>
+
+      <div className="flex flex-col mt-36">
+        <CenteredTextHR title="spinner" type={1} />
+        <div className="w-full flex justify-center">
+          <Spinner />
         </div>
       </div>
     </div>
